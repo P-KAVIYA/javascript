@@ -78,3 +78,16 @@ console.log(100||20&&0)
 console.log((100||20)&&0)//==>hold three operan but becoz of bracket there is two operations
 console.log(0&&(100||20))
 
+// RELATIONAL OPERATORS
+
+//=>OPERANDS REQUIRED TWO==><,>,<=,>=,===,!==        
+//== AND != ALSO GIVE SAME ANSWER BUT IT IS NOT FESIBLE
+aR=10
+bR=20
+console.log("Relational operator >:",aR>bR)//--->FALSE
+console.log("Relational operator <:",aR<bR)//TRUE
+console.log("Relational operator >=:",aR>=bR)//FALSE
+console.log("Relational operator <=:",aR<=bR)//TRUE
+console.log("Relational operator ===:",aR===bR)//FALSE
+console.log("Relational operator !==:",aR!==bR)//TRUE
+
