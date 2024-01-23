@@ -28,28 +28,29 @@ display('hey').then(function(status) {
 });
 */
 //promise
-function isLocationValid(loc) {
-  var v = "namakkal";
-  if (v == loc) {
-    return true;
-  } else {
-    return false;
-  }
+
+
+function hasFedVirtualPet() {
+  // Simulate whether the user has fed their virtual pet
+  return Math.random() < 0.5;
 }
-function location(response, errorMessage) {
-  return new Promise(
-    setTimeOut(function (response,errorMsg) {
-      loc = "namakkal";
-      console.log(loc);
-      if (isLocationValid(loc)) return response(loc, "Location found");
-      else return errorMessage("Location not found");
-    }, 2000)
-  );
+
+function login() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      if (hasFedVirtualPet()) {
+        resolve("Your virtual pet is well-fed and happy!");
+      } else {
+        reject("Oops! It seems like your virtual pet is hungry.");
+      }
+    }, 1000);
+  });
 }
-location()
-  .then(function (response) {
-    console.log(response);
+
+login()
+  .then(function (message) {
+    console.log(message);
   })
-  .catch(function (errorMessage) {
-    console.log(errorMessage);
+  .catch(function (message) {
+    console.log(message);
   });

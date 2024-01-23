@@ -1,3 +1,16 @@
+/*async function asAw() {
+    var promise = new Promise(
+        function (response) {
+            setTimeout(function () {
+                //console.log(response)
+                response("Example for async/Await");
+            }, 1000)
+        }
+    );
+    console.log(await promise);
+}
+asAw()
+//kind of our own instagram*/
 async function commentCode() {
     return new Promise(
         function (commentValue) {
@@ -6,8 +19,8 @@ async function commentCode() {
             }, 1000)
         }
     );
-  }
-  async function likeCode() {
+}
+async function likeCode() {
     return new Promise(
         function (likeValue) {
             setTimeout(function () {
@@ -15,10 +28,8 @@ async function commentCode() {
             }, 1000)
         }
     );
-  
-  
-  }
-  async function post() {
+}
+async function post() {
     let post = new Promise(
         function (postResponse) {
             setTimeout(function () {
@@ -30,6 +41,5 @@ async function commentCode() {
     console.log(feed) //put await otherwise it shows promise pending error
     console.log(comment)
     console.log(like)
-  }
-  
-  post()
+}
+post()
